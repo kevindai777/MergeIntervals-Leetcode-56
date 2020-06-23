@@ -24,7 +24,7 @@ result.push(intervals[0])
 //then we replace the interval's second value with the greater of the interval ends.
 
 //For example, if recentOutput = [1,3] and interval[i] = [2,6]
-//2 is in between [1,3], so we check the greater between 3 and 6
+//2 is less than 3, so we check the greater between 3 and 6
 //Thus, the new interval is [1,6]
 
 //[1,6] is then checked with the next unchecked term of [8,10]
@@ -32,7 +32,7 @@ result.push(intervals[0])
 //the next unchecked term, [15, 18]
 for (let i = 0; i < intervals.length; i++) {
     let recentOutput = result[result.length - 1]
-    if (intervals[i][0] >= recentOutput[0] && intervals[i][0] <= recentOutput[1]) {
+    if (recentOutput[1] >= intervals[i][0]) {
         recentOutput[1] = Math.max(recentOutput[1], intervals[i][1])
     } else {
         result.push(intervals[i])
