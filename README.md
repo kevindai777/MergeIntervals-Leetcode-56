@@ -3,6 +3,6 @@
 Leetcode Question 56 (Medium)
 
 Techniques Used in Question:
-Sorting
+Sorting, Array-Manipulation
 
 [Link to Question](https://leetcode.com/problems/merge-intervals/)
